@@ -1,0 +1,14 @@
+{
+  "domain": "elkscall",
+  "name": "46Elks Call",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/elkscall",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@antonmyr"
+  ]
+}
