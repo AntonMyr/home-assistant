@@ -1,0 +1,14 @@
+{
+  "domain": "test_integration",
+  "name": "46Elks",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/test_integration",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": ["webhook"],
+  "codeowners": [
+    "@antonmyr"
+  ]
+}
