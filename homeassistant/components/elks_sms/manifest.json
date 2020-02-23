@@ -7,7 +7,7 @@
   "ssdp": [],
   "zeroconf": [],
   "homekit": {},
-  "dependencies": ["test_integration"],
+  "dependencies": ["elks"],
   "codeowners": [
     "@antonmyr"
   ]

@@ -9,7 +9,7 @@ from homeassistant.components.notify import (
     PLATFORM_SCHEMA,
     BaseNotificationService,
 )
-from homeassistant.components.test_integration import DATA_46ELKS
+from homeassistant.components.elks import DATA_46ELKS
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)

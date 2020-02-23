@@ -1,4 +1,4 @@
-"""The sms integration."""
+"""The 46Elks hub integration."""
 import asyncio
 import logging
 

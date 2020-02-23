@@ -1,8 +1,8 @@
 {
-  "domain": "test_integration",
+  "domain": "elks",
   "name": "46Elks",
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/test_integration",
+  "documentation": "https://www.home-assistant.io/integrations/elks",
   "requirements": [],
   "ssdp": [],
   "zeroconf": [],
