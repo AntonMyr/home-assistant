@@ -18,6 +18,7 @@ CONF_USER_ID = "user_id"
 CONF_API_PASSWORD = "api_password"
 
 DATA_46ELKS = DOMAIN
+RECEIVED_DATA = f"{DOMAIN}_data_received"
 
 
 async def async_setup(hass, config):
