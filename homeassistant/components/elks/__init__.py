@@ -1,18 +1,14 @@
 """The 46Elks hub integration."""
-import asyncio
 import logging
 
-import voluptuous as vol
-
 from elks_sdk import Elk
-from homeassistant.config_entries import ConfigEntry
+
 from homeassistant.const import CONF_WEBHOOK_ID
-from homeassistant.core import HomeAssistant
-import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers import config_entry_flow
 
-_LOGGER = logging.getLogger(__name__)
 from .const import DOMAIN
+
+_LOGGER = logging.getLogger(__name__)
 
 CONF_USER_ID = "user_id"
 CONF_API_PASSWORD = "api_password"
@@ -28,9 +24,7 @@ async def async_setup(hass, config):
         return True
 
     conf = config[DOMAIN]
-    hass.data[DATA_46ELKS] = Elk(
-        conf.get(CONF_USER_ID), conf.get(CONF_API_PASSWORD)
-    )
+    hass.data[DATA_46ELKS] = Elk(conf.get(CONF_USER_ID), conf.get(CONF_API_PASSWORD))
     return True
 
 
