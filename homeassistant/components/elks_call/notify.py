@@ -3,13 +3,13 @@ import logging
 
 import voluptuous as vol
 
+from homeassistant.components.elks import DATA_46ELKS
 from homeassistant.components.notify import (
-    ATTR_TARGET,
     ATTR_DATA,
+    ATTR_TARGET,
     PLATFORM_SCHEMA,
     BaseNotificationService,
 )
-from homeassistant.components.elks import DATA_46ELKS
 import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
@@ -27,12 +27,11 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 
 def get_service(hass, config, discovery_info=None):
     """Get the Elks Call notification service."""
-    return ElksCallNotificationService(
-        hass.data[DATA_46ELKS], config[CONF_FROM_NUMBER]
-    )
+    return ElksCallNotificationService(hass.data[DATA_46ELKS], config[CONF_FROM_NUMBER])
 
 
 class ElksCallNotificationService(BaseNotificationService):
+    """ElksCallNotification base on BaseNotificationService."""
 
     def __init__(self, elks_sdk, from_number):
         """Initialize the service."""
@@ -41,7 +40,7 @@ class ElksCallNotificationService(BaseNotificationService):
 
     # Name has to be send_message cause of BaseNotificationService
     def send_message(self, message="", **kwargs):
-        """Send SMS to specified target user cell."""
+        """Call target using 46Elks SDK."""
         targets = kwargs.get(ATTR_TARGET)
         data = kwargs.get(ATTR_DATA) or {}
         elks_args = {"sender": self.from_number}
@@ -54,6 +53,4 @@ class ElksCallNotificationService(BaseNotificationService):
             return
 
         for target in targets:
-            self.client.make_call(
-                to=target, **elks_args
-            )
+            self.client.make_call(to=target, **elks_args)
