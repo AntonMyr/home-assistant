@@ -1,0 +1,12 @@
+{
+    "domain": "elks46",
+    "name": "46elks",
+    "config_flow": true,
+    "documentation": "https://www.home-assistant.io/integrations/elks",
+    "requirements": [],
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "dependencies": ["webhook"],
+    "codeowners": ["@antonmyr"]
+}

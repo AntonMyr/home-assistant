@@ -1,4 +1,4 @@
-"""The 46Elks hub integration."""
+"""The 46elks hub integration."""
 import logging
 
 from elks_sdk import Elk
@@ -29,7 +29,7 @@ async def async_setup(hass, config):
 
 
 async def handle_webhook(hass, webhook_id, request):
-    """Handle incoming webhook from 46Elks for inbound messages and calls."""
+    """Handle incoming webhook from 46elks for inbound messages and calls."""
     data = dict(await request.post())
     data["webhook_id"] = webhook_id
     hass.bus.async_fire(RECEIVED_DATA, dict(data))
@@ -40,7 +40,7 @@ async def handle_webhook(hass, webhook_id, request):
 async def async_setup_entry(hass, entry):
     """Configure based on config entry."""
     hass.components.webhook.async_register(
-        DOMAIN, "46Elks", entry.data[CONF_WEBHOOK_ID], handle_webhook
+        DOMAIN, "46elks", entry.data[CONF_WEBHOOK_ID], handle_webhook
     )
     return True
 
