@@ -1,0 +1,12 @@
+{
+    "domain": "elks46_phonecalls",
+    "name": "46elks phone calls",
+    "config_flow": false,
+    "documentation": "https://www.home-assistant.io/integrations/elks_phonecalls",
+    "requirements": [],
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "dependencies": ["elks"],
+    "codeowners": ["@antonmyr"]
+}

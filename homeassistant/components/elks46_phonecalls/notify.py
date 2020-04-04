@@ -26,7 +26,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 
 
 def get_service(hass, config, discovery_info=None):
-    """Get the Elks Call notification service."""
+    """Get the elks46 phone calls notification service."""
     return ElksCallNotificationService(hass.data[DATA_46ELKS], config[CONF_FROM_NUMBER])
 
 
@@ -40,7 +40,7 @@ class ElksCallNotificationService(BaseNotificationService):
 
     # Name has to be send_message cause of BaseNotificationService
     def send_message(self, message="", **kwargs):
-        """Call target using 46Elks SDK."""
+        """Call target using 46elks SDK."""
         targets = kwargs.get(ATTR_TARGET)
         data = kwargs.get(ATTR_DATA) or {}
         elks_args = {"sender": self.from_number}

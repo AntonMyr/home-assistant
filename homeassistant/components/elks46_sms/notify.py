@@ -1,4 +1,4 @@
-"""46Elks SMS notify component."""
+"""46elks SMS notify component."""
 import logging
 
 import voluptuous as vol
@@ -34,11 +34,13 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 
 def get_service(hass, config, discovery_info=None):
     """Get the notification service."""
-    return ElksSMSNotificationService(hass.data[DATA_46ELKS], config[CONF_FROM_NUMBER])
+    return elks46SMSNotificationService(
+        hass.data[DATA_46ELKS], config[CONF_FROM_NUMBER]
+    )
 
 
-class ElksSMSNotificationService(BaseNotificationService):
-    """ElksSMSNotificationService base on BaseNotificationService."""
+class elks46SMSNotificationService(BaseNotificationService):
+    """elks46SMSNotificationService base on BaseNotificationService."""
 
     def __init__(self, elks_client, from_number):
         """Initialize the service."""
