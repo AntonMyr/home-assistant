@@ -101,6 +101,7 @@ homeassistant/components/eight_sleep/* @mezz64
 homeassistant/components/elgato/* @frenck
 homeassistant/components/elkm1/* @bdraco
 homeassistant/components/elks46/* @antonmyr
+homeassistant/components/elks46_mms/* @antonmyr
 homeassistant/components/elks46_phonecalls/* @antonmyr
 homeassistant/components/elks46_sms/* @antonmyr
 homeassistant/components/elv/* @majuss
@@ -251,6 +252,7 @@ homeassistant/components/ness_alarm/* @nickw444
 homeassistant/components/nest/* @awarecan
 homeassistant/components/netatmo/* @cgtobi
 homeassistant/components/netdata/* @fabaff
+homeassistant/components/nexia/* @ryannazaretian @bdraco
 homeassistant/components/nextbus/* @vividboarder
 homeassistant/components/nextcloud/* @meichthys
 homeassistant/components/nilu/* @hfurubotten

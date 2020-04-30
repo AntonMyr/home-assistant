@@ -80,6 +80,7 @@ FLOWS = [
     "neato",
     "nest",
     "netatmo",
+    "nexia",
     "notion",
     "nuheat",
     "nut",

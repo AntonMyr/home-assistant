@@ -1,14 +1,12 @@
 {
-  "domain": "elks_sms",
-  "name": "46Elks SMS",
-  "config_flow": false,
-  "documentation": "https://www.home-assistant.io/integrations/elks_sms",
-  "requirements": [],
-  "ssdp": [],
-  "zeroconf": [],
-  "homekit": {},
-  "dependencies": ["elks"],
-  "codeowners": [
-    "@antonmyr"
-  ]
+    "domain": "elks46_sms",
+    "name": "46Elks SMS",
+    "config_flow": false,
+    "documentation": "https://www.home-assistant.io/integrations/elks46_sms",
+    "requirements": [],
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "dependencies": ["elks46"],
+    "codeowners": ["@antonmyr"]
 }

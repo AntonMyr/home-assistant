@@ -7,6 +7,6 @@
     "ssdp": [],
     "zeroconf": [],
     "homekit": {},
-    "dependencies": ["elks"],
+    "dependencies": ["elks46"],
     "codeowners": ["@antonmyr"]
 }

@@ -3,7 +3,7 @@ import logging
 
 import voluptuous as vol
 
-from homeassistant.components.elks import DATA_46ELKS
+from homeassistant.components.elks46 import DATA_46ELKS
 from homeassistant.components.notify import (
     ATTR_DATA,
     ATTR_TARGET,
