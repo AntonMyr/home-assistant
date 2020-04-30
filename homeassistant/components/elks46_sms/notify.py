@@ -5,7 +5,6 @@ import voluptuous as vol
 
 from homeassistant.components.elks import DATA_46ELKS
 from homeassistant.components.notify import (
-    ATTR_DATA,
     ATTR_TARGET,
     PLATFORM_SCHEMA,
     BaseNotificationService,
@@ -50,19 +49,11 @@ class elks46SMSNotificationService(BaseNotificationService):
     def send_message(self, message="", **kwargs):
         """Send SMS to specified target user cell."""
         targets = kwargs.get(ATTR_TARGET)
-        data = kwargs.get(ATTR_DATA) or {}
         elks_args = {"message": message, "sender": self.from_number}
 
         if not targets:
             _LOGGER.info("At least 1 target is required")
             return
 
-        if ATTR_IMAGE in data:
-            elks_args[ATTR_IMAGE] = data[ATTR_IMAGE]
-            # The sender argument doesn't work with mms
-            del elks_args["sender"]
-            for target in targets:
-                self.client.send_mms(to=target, **elks_args)
-        else:
-            for target in targets:
-                self.client.send_sms(to=target, **elks_args)
+        for target in targets:
+            self.client.send_sms(to=target, **elks_args)
