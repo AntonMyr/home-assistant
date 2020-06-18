@@ -1,3 +1,3 @@
-"""Constants for the sms integration."""
+"""Constants for the elks46 integration."""
 
 DOMAIN = "elks46"
