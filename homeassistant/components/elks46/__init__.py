@@ -32,15 +32,15 @@ async def handle_webhook(hass, webhook_id, request):
     """Handle incoming webhook from 46elks for inbound messages and calls."""
     data = dict(await request.post())
     data["webhook_id"] = webhook_id
-    hass.bus.async_fire(RECEIVED_DATA, dict(data))
+    hass.bus.async_fire(RECEIVED_DATA, data)
 
-    return data
+    return None
 
 
 async def async_setup_entry(hass, entry):
     """Configure based on config entry."""
     hass.components.webhook.async_register(
-        DOMAIN, "46elks", entry.data[CONF_WEBHOOK_ID], handle_webhook
+        DOMAIN, "elks46", entry.data[CONF_WEBHOOK_ID], handle_webhook
     )
     return True
 
