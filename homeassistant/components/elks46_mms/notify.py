@@ -26,6 +26,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
                 r"^(?=.{1,11}$)[a-zA-Z0-9\s]*"
                 r"[a-zA-Z][a-zA-Z0-9\s]*$"
                 r"^(?:[a-zA-Z]+)\:?\+?[1-9]\d{1,14}$|"
+                r"noreply"
             ),
         )
     }
