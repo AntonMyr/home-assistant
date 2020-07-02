@@ -14,7 +14,6 @@ import homeassistant.helpers.config_validation as cv
 _LOGGER = logging.getLogger(__name__)
 
 CONF_FROM_NUMBER = "from_number"
-ATTR_IMAGE = "image"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
@@ -44,6 +43,7 @@ class elks46SMSNotificationService(BaseNotificationService):
     def __init__(self, elks_client, from_number):
         """Initialize the service."""
         self.client = elks_client
+        # Check that the from_number follows the limitations
         self.from_number = from_number
 
     def send_message(self, message="", **kwargs):
