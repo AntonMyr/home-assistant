@@ -52,7 +52,11 @@ class elks46MMSNotificationService(BaseNotificationService):
         """Send MMS to specified target user cell."""
         targets = kwargs.get(ATTR_TARGET)
         data = kwargs.get(ATTR_DATA) or {}
-        elks46_args = {"message": message, ATTR_IMAGE: data[ATTR_IMAGE]}
+        elks46_args = {
+            "message": message,
+            "sender": self.from_number,
+            ATTR_IMAGE: data[ATTR_IMAGE],
+        }
 
         if not targets:
             _LOGGER.info("At least 1 target is required")
